@@ -1,0 +1,76 @@
+# Project: final_project
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o chara1.o chara2.o chara3.o game3.o game7.o game4.o game8.o again.o game1.o game5.o game6.o game2.o SlowPrint.o game9.o PlayRiddle.o music.o
+LINKOBJ  = main.o chara1.o chara2.o chara3.o game3.o game7.o game4.o game8.o again.o game1.o game5.o game6.o game2.o SlowPrint.o game9.o PlayRiddle.o music.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = final_project.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+chara1.o: chara1.c
+	$(CC) -c chara1.c -o chara1.o $(CFLAGS)
+
+chara2.o: chara2.c
+	$(CC) -c chara2.c -o chara2.o $(CFLAGS)
+
+chara3.o: chara3.c
+	$(CC) -c chara3.c -o chara3.o $(CFLAGS)
+
+game3.o: game3.c
+	$(CC) -c game3.c -o game3.o $(CFLAGS)
+
+game7.o: game7.c
+	$(CC) -c game7.c -o game7.o $(CFLAGS)
+
+game4.o: game4.c
+	$(CC) -c game4.c -o game4.o $(CFLAGS)
+
+game8.o: game8.c
+	$(CC) -c game8.c -o game8.o $(CFLAGS)
+
+again.o: again.c
+	$(CC) -c again.c -o again.o $(CFLAGS)
+
+game1.o: game1.c
+	$(CC) -c game1.c -o game1.o $(CFLAGS)
+
+game5.o: game5.c
+	$(CC) -c game5.c -o game5.o $(CFLAGS)
+
+game6.o: game6.c
+	$(CC) -c game6.c -o game6.o $(CFLAGS)
+
+game2.o: game2.c
+	$(CC) -c game2.c -o game2.o $(CFLAGS)
+
+SlowPrint.o: SlowPrint.c
+	$(CC) -c SlowPrint.c -o SlowPrint.o $(CFLAGS)
+
+game9.o: game9.c
+	$(CC) -c game9.c -o game9.o $(CFLAGS)
+
+PlayRiddle.o: PlayRiddle.c
+	$(CC) -c PlayRiddle.c -o PlayRiddle.o $(CFLAGS)
+
+music.o: music.c
+	$(CC) -c music.c -o music.o $(CFLAGS)
